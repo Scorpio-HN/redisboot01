@@ -12,5 +12,5 @@ public class Redisboot01Application {
         SpringApplication.run(Redisboot01Application.class, args);
     }
 
-
+   //增加了注释。什么时候去日本
 }
