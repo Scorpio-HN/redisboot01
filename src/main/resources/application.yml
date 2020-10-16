@@ -1,0 +1,50 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /redis
+
+spring:
+  mvc:
+    static-path-pattern: /**
+  resources:
+    static-locations: classpath:/templates/,classpath:/static/,classpath:/META-NF/resources/,classpath:/resources/,classpath:/public/,classpath:/upload
+  thymeleaf:
+    encoding: UTF-8
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+
+#redis配置
+  redis:
+    database: 0
+    #host: 192.168.88.144
+    #port: 6380
+    password: 123456
+    timeout: 10s
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 5
+        min-idle: -1
+    #集群
+    cluster:
+      nodes:
+      - 192.168.88.144:7000
+      - 192.168.88.144:7001
+      - 192.168.88.144:7002
+      - 192.168.88.144:7003
+      - 192.168.88.144:7004
+      - 192.168.88.144:7005
+
+    #哨兵
+#    sentinel:
+#      master: mymaster
+#      nodes:
+#        - 192.168.88.144:26379
+#        - 192.168.88.144:26380
+#        - 192.168.88.144:26380
