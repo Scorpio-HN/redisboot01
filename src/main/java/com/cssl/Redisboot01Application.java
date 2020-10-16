@@ -12,4 +12,5 @@ public class Redisboot01Application {
         SpringApplication.run(Redisboot01Application.class, args);
     }
 
+    //注释了
 }
