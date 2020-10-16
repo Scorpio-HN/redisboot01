@@ -12,7 +12,5 @@ public class Redisboot01Application {
         SpringApplication.run(Redisboot01Application.class, args);
     }
 
-    //注释了
 
-    //我知道了，你可以哟
 }
